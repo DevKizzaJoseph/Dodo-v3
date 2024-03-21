@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/screenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10px"
+            android:paddingEnd="10dp"
+            android:text="DoLe Insole"
+            android:textSize="30sp"
+            tools:ignore="HardcodedText" />
+
+        <!-- Pressure Section -->
+        <TextView
+            android:id="@+id/pressureTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Pressure"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <ProgressBar
+            android:id="@+id/pressureProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:max="100"
+            style="?android:attr/progressBarStyleHorizontal"/>
+
+        <!-- Temperature Section -->
+        <TextView
+            android:id="@+id/temperatureTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Temperature"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <ProgressBar
+            android:id="@+id/temperatureProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:max="100"
+            style="?android:attr/progressBarStyleHorizontal"/>
+
+        <!-- Humidity Section -->
+        <TextView
+            android:id="@+id/humidityTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Humidity"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <ProgressBar
+            android:id="@+id/humidityProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:max="100"
+            style="?android:attr/progressBarStyleHorizontal"/>
+
+        <!-- Health Status Section -->
+        <TextView
+            android:id="@+id/healthStatusTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Health Status"
+            android:textSize="24sp" />
+
+        <!-- Dynamic Health Status Indicators -->
+        <!-- Note: Icons are not included in this XML. You need to add ImageView for each status and manage its visibility in Java code. -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/foothealth"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp" />
+            <!-- Adjust margin as needed -->
+
+            <TextView
+                android:id="@+id/footHealthStatusTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Foot Health: Good"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pressure16"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp" />
+            <!-- Adjust margin as needed -->
+
+            <TextView
+                android:id="@+id/pressureStatusTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/pressure_high"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/temp16"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp" />
+            <!-- Adjust margin as needed -->
+
+            <TextView
+                android:id="@+id/temperatureStatusTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/temperature_normal"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/humidity16"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp" />
+            <!-- Adjust margin as needed -->
+
+            <TextView
+                android:id="@+id/humidityStatusTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Humidity: Normal"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+</ScrollView>
